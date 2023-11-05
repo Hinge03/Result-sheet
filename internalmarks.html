@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: wheat;
+            text-align: center;
+        }
+        .text-footer{
+            position: absolute;
+            text-align: center;
+            padding: 30px;
+            font-family: 'ubantu',sans-serif;
+            display: flex;
+            justify-content: center;
+            color: white;
+            bottom: 10px;
+            background: black;
+            background-blend-mode: darken;
+            background-size: cover;
+            text-align: center;
+            width: 100%;
+        }
+        a{
+           color: black;
+        }
+
+    </style>    
+</head>
+<body>
+    <h2>INTERNAL RESULTS</h2>
+        SUBJECT-1:<input type="text" name="subject" id="subject"><br><br>
+        SUBJECT-2:<input type="text" name="subject" id="subject"><br><br>
+        SUBJECT-3:<input type="text" name="subject" id="subject"><br><br>
+        SUBJECT-4:<input type="text" name="subject" id="subject"><br><br>
+        SUBJECT-5:<input type="text" name="subject" id="subject"><br><br>
+        SUBJECT-6:<input type="text" name="subject" id="subject"><br><br>
+
+        <br><br>
+        Total:<input type="text" name="Total" id="Total">
+        Average:<input type="text" name="Average" id="Average">
+        <br><br>
+        <button onclick="findtotal()">CALCULATE</button>
+        <br><br>
+        <button><a href="index.html">Home</a></button>
+        <br><br>
+        <button><a href="externalmarks.html">Next</a></button>
+        
+        <script>
+            function findtotal(){
+                var arr = document.getElementsByName('subject');
+                var tot=0;
+                for(var i=0; i<arr.length;i++)
+                {
+                if(parseInt(arr[i].value));
+                   tot += parseInt(arr[i].value);
+                var Average = tot/6;
+                }
+                document.getElementById('Total').value = tot;
+                document.getElementById('Average').value = Average;
+            }
+
+        </script>
+   
+    <footer>
+        <p class="text-footer">
+            Copyright @-All rights are reserved
+        </p>
+    </footer>
+</body>
+</html>
